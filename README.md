@@ -28,7 +28,7 @@ In get worker detail with the aid of id I used JavaScript in growing the worker 
 PALADUGULA RANADEV
 10613858
 SOURCES
-SOURCES
+
 
 Html: (Hyper Text Markup Language) The preferred markup language for documents intended to be viewed in a web browser is HTML, or Hyper Text Markup Language. Technologies like Cascading Style Sheets (CSS) and scripting languages
 
