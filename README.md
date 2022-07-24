@@ -27,3 +27,16 @@ In get worker detail with the aid of id I used JavaScript in growing the worker 
 
 PALADUGULA RANADEV
 10613858
+SOURCES
+SOURCES
+
+Html: (Hyper Text Markup Language) The preferred markup language for documents intended to be viewed in a web browser is HTML, or Hyper Text Markup Language. Technologies like Cascading Style Sheets (CSS) and scripting languages
+
+CSS: (CSS stands for Cascading Style Sheets.)
+CSS explains how HTML elements should appear on screens, in print, or in other media.
+A lot of work is saved via CSS. It can manage the design of several web pages simultaneously.
+In CSS files, external stylesheets are kept.
+
+JS: (JavaScript) Programmers all over the world use Java script to make dynamic and interactive online apps and browsers. JavaScript is the most widely used programming language in the world due to its immense popularity.
+
+AJAX: (Asynchronous JavaScript and XML) AJAX is a method for quickly and dynamically producing web pages. By secretly sharing small quantities of data with the server, AJAX enables web pages to be updated asynchronously. This indicates that a web page can be updated in sections without requiring a page reload.
