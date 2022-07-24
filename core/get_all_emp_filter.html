@@ -21,3 +21,109 @@
 <!-- Text input-->
 
 <br><br>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Enter Your key</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  id="key" placeholder="Enter Your key" class="form-control"  type="text">
+    </div>
+  </div>
+</div><br><br>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Order</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input id="order" placeholder="order" class="form-control"  type="text">
+    </div>
+  </div>
+</div><br><br>
+
+
+
+
+<!-- Select Basic -->
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up" ></i> Success!.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick="submit_data()" type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+  </div>
+</div><br><br>
+<br>
+<br>
+
+
+<div class="container">       
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>emp_id</th>
+        <th>full_name</th>
+        <th>email_id</th>
+        <th>role</th>
+        <th>year_of_expserience</th>
+        <th>salary</th>
+      </tr>
+    </thead>
+    <tbody id="eryy">
+    </tbody>
+  </table>
+</div>
+</fieldset>
+
+</div>
+    </div><!-- /.container -->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+         
+function submit_data() {
+
+    var settings = {
+      "url": "http://127.0.0.1:8000/employee/",
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "accept": "application/json"
+      },
+    };
+
+
+$.ajax(settings).done(function (response) {
+console.log(response);
+text = '';
+ft = response.data
+for (var i = 0; i < ft.length; i++) {
+  yu = ft[i];
+  for (var j = 0; j < yu.length; j++) {
+       res_data = yu[j];
+       text += `<tr>
+         <td>${res_data['emp_id']}</td>
+         <td>${res_data['full_name']}</td>
+         <td>${res_data['email_id']}</td>
+         <td>${res_data['role']}</td>
+         <td>${res_data['year_of_expserience']}</td>
+         <td>${res_data['salary']}</td>
+       </tr>`;
+  }
+   $("#eryy").append(text);
+  console.log(text);
+   
+}
+
+    });
+}
+
+    </script>
